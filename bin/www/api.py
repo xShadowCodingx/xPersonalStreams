@@ -1,10 +1,13 @@
 # This is the main API entry point
 
+# Module Imports
 from flask import Flask
 
-app = Flask(__name__)
+# App Initialization
+app = Flask(__name__, static_folder="public")
 
-@app.route('/')
-def home():
-    return "HELLO"
+# Blueprint Imports
+from .route_blueprints import index
 
+# Blueprint Registration
+app.register_blueprint(index)
