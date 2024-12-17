@@ -2,9 +2,14 @@
 
 Personal cloud streaming service software built in Python.
 
-**Outline:**
+## First Steps
 
-#### API
+When the API is first started:
+- If there isn't a local administrator, then it will prompt to create one.
+- It will create the initial settings file
+- It will create the storage folder
+
+## API
 - **/**
 - - GET: Login
 - **/users**
