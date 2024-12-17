@@ -63,3 +63,10 @@ Personal cloud streaming service software built in Python.
 - - GET: 3 Newest Playlists
 - **/media/playlist/popular**
 - - GET: 5 Most Accessed Playlists
+- **/media/series**
+- - GET: All Series
+- - POST: Create Series Log And Save Series Thumbnail
+- - DEL: Delete Series Log
+- - PUT: Edit Series Log
+- **media/series/load**
+- - GET: Series By ID
