@@ -9,6 +9,6 @@ index = Blueprint('index', __name__, template_folder="templates")
 @index.route('/', methods=["GET"])
 def login():
     try:
-        return render_template('index.html', website_title="xps")
+        return render_template('index.html', website_title="xps", app_title="xPersonal Streams")
     except TemplateNotFound:
         abort(404)

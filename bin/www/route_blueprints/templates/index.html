@@ -1,19 +1,42 @@
 <!-- This is the index template -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{website_title}}</title>
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='/assets/images/xPersonalStreams_logo.png')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/xps.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css')}}">
-    <script src="{{url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
 </head>
+
 <body>
-    <div class="row g-0 justify-content-center">
-        <div class="card">
-            asdf
+    <div class="__login-row" style="background-image: url({{url_for('static', filename='/assets/images/xPersonalStreams_background-logo.png')}})">
+        <div class="card __login-card">
+            <div class="__login-card-image-container">
+                <img class="__login-card-img"
+                    src="{{url_for('static', filename='/assets/images/xPersonalStreams_logo.png')}}"
+                    alt="{{app_title}} Logo">
+            </div>
+            <h1 class="__login-heading text-center">{{app_title}}</h1>
+            <form>
+                <div class="mb-3">
+                    <label for="Username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="Username">
+                </div>
+                <div class="mb-3">
+                    <label for="UserPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="UserPassword">
+                </div>
+                <div class="text-center mb-3">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </form>
         </div>
     </div>
 </body>
+
 </html>
